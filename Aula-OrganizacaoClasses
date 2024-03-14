@@ -1,0 +1,69 @@
+// Exemplo de organização de classes em Java
+
+// Pacote "model"
+package model;
+
+// Classe base para veículos
+public abstract class Veiculo {
+    private String marca;
+    private String modelo;
+
+    public Veiculo(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+
+    public abstract void acelerar();
+    public abstract void frear();
+}
+
+// Classe Carro herda de Veiculo
+public class Carro extends Veiculo {
+    private int numPortas;
+
+    public Carro(String marca, String modelo, int numPortas) {
+        super(marca, modelo);
+        this.numPortas = numPortas;
+    }
+
+    @Override
+    public void acelerar() {
+        // Implementação
+    }
+
+    @Override
+    public void frear() {
+        // Implementação
+    }
+}
+
+// Classe Moto herda de Veiculo
+public class Moto extends Veiculo {
+    private boolean temPartidaEletrica;
+
+    public Moto(String marca, String modelo, boolean temPartidaEletrica) {
+        super(marca, modelo);
+        this.temPartidaEletrica = temPartidaEletrica;
+    }
+
+    @Override
+    public void acelerar() {
+        // Implementação
+    }
+
+    @Override
+    public void frear() {
+        // Implementação
+    }
+}
+
+// Exemplo de uso
+public class Main {
+    public static void main(String[] args) {
+        Carro meuCarro = new Carro("Toyota", "Corolla", 4);
+        Moto minhaMoto = new Moto("Honda", "CBR", true);
+
+        meuCarro.acelerar();
+        minhaMoto.acelerar();
+    }
+}
